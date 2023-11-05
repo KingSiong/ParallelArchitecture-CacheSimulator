@@ -21,3 +21,10 @@ void State::build() {
 state_set State::next(tr_set k) {
     return st = tr[st][k];
 }
+
+string State::state() {
+    if (st == I) return "I";
+    if (st == S) return "S";
+    if (st == M) return "M";
+    return "I";
+}
