@@ -11,6 +11,6 @@ class State {
     State(state_set _st);
     ~State();
     void build();
-    state_set next(tr_set k);
+    state_set next(tr_set k); // next state using tranfer factor `tr'
     string state();
 };
