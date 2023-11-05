@@ -47,6 +47,7 @@ string excute(int i) {
     if (pos[i] >= (int)instructions[i].size()) return ""; // instructions are run out.
     int opt = instructions[i][pos[i]].first;
     string addr = instructions[i][pos[i]].second;
+    cout << "Processor #" << i << " is going to excute the instruction: \n> \033[33m\033[1m" << opt << "\033[0m \033[32m\033[1m" << addr << "\033[0m" << endl;
     pos[i]++;
     int rw = opt, lr = 0;
     for (int j = 0; j < SIZE; j++) {
@@ -68,7 +69,6 @@ void run() {
         cout << "Choose a processor to excute instruction (0, 1, 2, 3): ";
         int num = 0;
         cin >> num;
-        cout << num << endl;
         addr = excute(num);
         if (addr != "") {
             cout << "The state of every cache on address \033[32m\033[1m0x" << addr << "\033[0m is: " << endl;
