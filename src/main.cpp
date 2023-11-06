@@ -77,7 +77,6 @@ void run() {
             cout << "No address available for reference." << endl;
         }
     }
-    show_state("00007c71");
 }
 
 int main() {
