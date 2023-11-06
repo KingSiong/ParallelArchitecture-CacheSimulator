@@ -66,14 +66,14 @@ void run() {
     cout << "This is a cache consistency simulator." << endl;
     string addr = "";
     while (true) {
-        cout << "Choose a processor to excute instruction (0, 1, 2, 3): ";
+        cout << "Choose a processor to excute instruction (0, 1, 2, 3): "; // interface
         int num = 0;
         cin >> num;
-        addr = excute(num);
-        if (addr != "") {
+        addr = excute(num); // excute
+        if (addr != "") { 
             cout << "The state of every cache on address \033[32m\033[1m0x" << addr << "\033[0m is: " << endl;
             show_state(addr);
-        } else {
+        } else { // instruction set is empty
             cout << "No address available for reference." << endl;
         }
     }
